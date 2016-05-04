@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\sgomezd\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'update' ]
+2 info using npm@1.4.23
+3 info using node@v4.4.0
+4 error TypeError: Request path contains unescaped characters.
+4 error     at new ClientRequest (_http_client.js:50:11)
+4 error     at TunnelingAgent.exports.request (http.js:31:10)
+4 error     at TunnelingAgent.createSocket (C:\Users\sgomezd\AppData\Roaming\npm\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:117:25)
+4 error     at TunnelingAgent.createSecureSocket [as createSocket] (C:\Users\sgomezd\AppData\Roaming\npm\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:184:41)
+4 error     at TunnelingAgent.addRequest (C:\Users\sgomezd\AppData\Roaming\npm\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:80:8)
+4 error     at new ClientRequest (_http_client.js:131:16)
+4 error     at Object.exports.request (http.js:31:10)
+4 error     at Object.socket.once.exports.request (https.js:183:15)
+4 error     at Request.start (C:\Users\sgomezd\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:583:30)
+4 error     at Request.end (C:\Users\sgomezd\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:1237:28)
+5 error If you need help, you may report this *entire* log,
+5 error including the npm and node versions, at:
+5 error     <http://github.com/npm/npm/issues>
+6 error System Windows_NT 6.1.7601
+7 error command "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\sgomezd\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "update"
+8 error cwd C:\Users\sgomezd\prototipo
+9 error node -v v4.4.0
+10 error npm -v 1.4.23
+11 verbose exit [ 1, true ]

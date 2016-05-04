@@ -1,0 +1,23 @@
+<!doctype html>
+
+<head>
+    <title>{{titulo}}</title>
+    <meta charset="utf-8">
+</head>
+
+<div class="capaBase">
+    
+    <h1 class="centrarContenido">Servicios</h1>
+    <p class="capaBorde">
+        Le ofrecemos capacidad, rapidez, eficacia y un servicio personalizado.<br>La profesionalidad de nuestro equipo y la calidad de nuestro trabajo son nuestra mejor garantía.
+    </p>
+        
+    <br/>
+    
+    <accordion>
+       <accordion-group heading=" {{post.title}}" ng-repeat="post in posts" class="capaBorde">
+             {{post.content}}
+       </accordion-group>
+    </accordion>
+
+</div>

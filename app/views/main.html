@@ -1,0 +1,38 @@
+<!doctype html>
+
+<head>
+    <title>{{titulo}}</title>
+    <meta charset="utf-8">
+</head>
+    
+<div class="capaBase">
+    
+    <carousel interval="setInterval">
+       <slide data-ng-repeat="slide in slides" active="slide.active">
+       <img class="carousel-image" data-ng-src="{{slide.image}}"  alt="{{slide.alt}}" src="#"/>
+          <div class="carousel-caption">
+                <h2>{{slide.title}}</h2>
+                <p class="carousel-desc">{{slide.text}}</p>
+          </div>
+       </slide>
+    </carousel>
+
+    <div class="centrarContenido">
+      <h1>Bienvenido a ST&amp;B Informatic Services</h1>
+      <p>Somos la empresa lider del sector en Salamanca. Para cualquier consulta relacionada con nuestros servicios no dude en preguntarnos.</p>
+        <div  data-ng-repeat="block in contenido">
+            <div class="capaBorde">
+                <h3><b>{{block.title}}</b></h3>
+                <img class="imgCircle " data-ng-src="{{block.img}}" src="#" alt="{{block.alt}}">
+                <p>{{block.sumario}} </p>
+            </div>
+            <br/>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+

@@ -1,0 +1,273 @@
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+$bgBaseColor      : #f9f5ff
+
+body
+  padding-top: 10px
+  padding-bottom: 10px
+
+.contenedor
+  width: 80%
+  max-width: 960px
+  margin: 0 auto
+  box-sizing: border-box
+
+.marginInferior
+  margin-bottom: 10px
+
+.carousel-image
+  width: 100%
+  height: auto
+
+.capaBase
+  font-size: 18px
+  font-weight: 200
+  line-height: 30px
+  background-color: $bgBaseColor
+  border-radius: 6px
+  padding: 15px 60px
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  margin-bottom: 10px
+  margin-top: 10px
+
+.carousel-image
+  width: 100%
+
+
+.capaBorde
+  padding: 12px
+  border-style: inset
+  border-radius: 20px
+  border-color: dodgerblue
+
+.centrarFooter
+  width: 80%
+  margin: 0 auto
+
+.centrarContenido
+  margin: 20px auto 20px
+  text-align: center
+
+.imgCircle
+  width: 40%
+  height: auto
+  margin: 0 auto
+  border-radius: 20%
+
+.tamPersonalizado
+  width: 50%
+
+.centrarImagen
+  width: 100%
+  border-radius: 6px
+
+.centrarImagenCircle
+  width: 40%
+  margin: 0 auto
+
+.centrarContenido80
+  width: 60%
+  margin: 20px auto 20px
+  text-align: center
+
+.margenImagenPais
+  width: 40%
+  margin: auto
+
+.capaContacto
+  margin: 0 auto
+  padding-top: 10px
+  padding-bottom: 10px
+
+.contenedorContacto
+  width: 50%
+  margin: 0 auto
+
+/* CODIGO DEL MENU */
+
+$bgDefault      : #8c669c
+$bgHighlight    : #8e44ad
+$colDefault     : #ecf0f1
+$colHighlight   : #ecdbff
+$dropDown       : true
+.navbar-default
+  background-color: $bgDefault
+  border-color: $bgHighlight
+  .navbar-brand
+    color: $colDefault
+    &:hover, &:focus
+      color: $colHighlight
+  .navbar-text
+    color: $colDefault
+  .navbar-nav
+    > li
+      > a
+        color: $colDefault
+        &:hover, &:focus
+          color: $colHighlight
+      @if $dropDown
+        > .dropdown-menu
+          background-color: $bgDefault
+          > li
+            > a
+              color: $colDefault
+              &:hover, &:focus
+                color: $colHighlight
+                background-color: $bgHighlight
+            > .divider
+              background-color: $bgHighlight
+    @if $dropDown
+      .open .dropdown-menu > .active
+        > a, > a:hover, > a:focus
+          color: $colHighlight
+          background-color: $bgHighlight
+    > .active
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+    > .open
+      > a, > a:hover, > a:focus
+        color: $bgHighlight
+        background-color: $colHighlight
+  .navbar-toggle
+    border-color: $bgHighlight
+    &:hover, &:focus
+      background-color: $bgHighlight
+    .icon-bar
+      background-color: $colDefault
+  .navbar-collapse,
+  .navbar-form
+    border-color: $colDefault
+  .navbar-link
+    color: $colDefault
+    &:hover
+      color: $colHighlight
+
+//FIN CODIGO MENU
+
+
+/* CODIGO DEL FOOTER
+
+.footer-basic-centered
+  background-color: $bgDefault
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12)
+  border-radius: 4px
+  border: 1px solid transparent
+  box-sizing: border-box
+  width: 100%
+  text-align: center
+  font: normal 18px sans-serif
+  padding: 45px
+  .footer-company-name
+    color: #8d9093
+    font-size: 24px
+    text-align: center
+    margin: 0
+  .footer-copyright
+    text-align: center
+    color: #8f9296
+    font-size: 14px
+    margin: 0
+  .footer-links
+    text-align: center
+    list-style: none
+    font-weight: bold
+    color: #ffffff
+    padding: 35px 0 23px
+    margin: 0
+    a
+      display: inline-block
+      text-decoration: none
+      color: inherit
+      &:hover
+        text-decoration: underline
+        color: #ecdbff
+  //FIN CODIGO FOOTER
+
+
+/* RESPONSIVE
+   ========================================================================= */
+ 
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px)
+  .contenedor
+    width: 88%
+  .capaBase
+    font-size: 16px 
+    padding: 25px 20px
+  .capaBorde
+    padding: 6px
+    border-radius: 15px
+  .contenedorContacto
+    width: 80%
+    margin: 0 auto
+  div section
+    width: 85%
+    margin: 0 auto
+  .imgCircle
+    border-radius: 40%
+  .carousel-caption
+    h2
+      font-size: 16px
+  .carousel-desc
+    display: none
+    
+  //MENU
+  .navbar-default
+    border-radius: 4px
+    .navbar-nav .open .dropdown-menu > li > a
+      color: $colDefault
+      &:hover, &:focus
+        color: $colHighlight
+    > .active
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+    
+  //FOOTER
+  .footer-basic-centered
+    padding: 20px
+    .footer-company-name
+      font-size: 18px
+      text-align: center
+    .footer-copyright
+      font-size: 12px
+      text-align: center
+    .footer-links
+      text-align: center   
+      font-size: 14px
+      padding: 10px 0 10px
+      a
+        line-height: 1.8
+        &:hover
+          text-decoration: underline
+          color: #ecdbff
+        
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px)
+  .contenedor
+    width: 95%
+  .capaBase
+    font-size: 14px
+    padding: 15px 10px
+  .capaBorde
+    padding: 6px
+    border-radius: 15px
+  .contenedorContacto
+    width: 90%
+    margin: 0 auto
+  div section
+    width: 85%
+    margin: 0 auto
+  .imgCircle
+    border-radius: 40%
+  .carousel-caption
+    h2
+      font-size: 14px
+
+    
+

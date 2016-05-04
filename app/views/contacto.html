@@ -1,0 +1,117 @@
+<!doctype html>
+
+<head>
+    <title>{{titulo}}</title>
+    <meta charset="utf-8">
+</head>
+
+<div class="capaBase">
+
+<div class="contenedorContacto">
+
+    <h3>Rellena el formulario de contacto.</h3>
+    
+    <form name="userForm" id="userForm" data-ng-submit="submitForm()" novalidate class="capaContacto">
+
+        <!-- NOMBRE -->
+        <div class="form-group" data-ng-class="{ 'has-error' : userForm.name.$invalid  && !userForm.name.$pristine, 'has-success': userForm.name.$valid}">
+            <span class=" glyphicon glyphicon-user"></span>
+            <label>Nombre *</label>
+            <input type="text"  name="name" class="form-control" placeholder="Introduce tu nombre" data-ng-model="usuario.name" data-ng-minlength='{{user[0].name.minlength}}' data-ng-maxlength="{{user[0].name.maxlength}}" data-ng-required='user[0].name.required' />
+            <p class="help-block" data-ng-show="userForm.name.$dirty && userForm .name.$error.required">El nombre es obligatorio!</p>
+            <p class="help-block" data-ng-show="userForm.name.$error.minlength">El nombre es demasiado corto!</p>
+            <p class="help-block" data-ng-show="userForm.name.$error.maxlength">El nombre es demasiado largo!</p>
+        </div>
+        
+        
+        <!-- EMAIL -->
+        <div class="form-group" data-ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine, 'has-success': userForm.email.$valid }">
+            <span class=" glyphicon glyphicon-envelope"></span>
+            <label>Email *</label>
+            <input type="email" name="email" class="form-control" placeholder="Introduce tu email" data-ng-model="usuario.email" required>
+            <p class="help-block" data-ng-show="userForm.email.$dirty && userForm .email.$error.required">El email es obligatorio!</p>
+            <p class="help-block" data-ng-show="userForm.email.$error.email">Introduce un email válido!</p>
+        </div>
+        
+                <!-- TIPOS DE TELEFONO QUE CUMPLEN LA PATENTE
+                (123) 456-7890
+                123-456-7890
+                123456789
+                123.456.7890
+                1234567890
+                +31636363634
+                075-63546725-->
+         <!-- TELEFONO USUARIO -->
+        <div class="form-group" data-ng-class="{'has-error': userForm.phone.$invalid && !userForm.phone.$pristine, 'has-success': userForm.phone.$valid}">
+            <span class=" glyphicon glyphicon-earphone"></span>
+            <label for="inputTelefono">Teléfono *</label>
+            <input id="inputTelefono" type="tel" class="form-control" placeholder="Teléfono" name="phone" data-ng-model="usuario.phone"  data-ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3,6}$/" required>
+            <div data-ng-show="userForm.phone.$dirty && userForm.phone.$invalid">
+                <p class="help-block text-danger" data-ng-show="userForm.phone.$error.pattern">Introduce un teléfono válido!</p>
+                <p class="help-block text-danger" data-ng-show="userForm.phone.$error.required">El teléfono es obligatorio!</p>
+            </div>
+        </div>
+        
+        
+        <!-- MENSAJE USUARIO -->
+        <div class="form-group" data-ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine, 'has-success': userForm.message.$valid }">
+            <span class="glyphicon glyphicon-edit"></span>
+            <label>Mensage *</label>
+            <textarea maxlength="5000" rows="8" class="form-control" name="message" data-ng-model="usuario.message" required></textarea>
+            <p class="help-block" data-ng-show="userForm.message.$dirty && userForm .message.$error.required">El mensaje es obligatorio!</p>
+        </div>
+        
+        <!--CHECKBOX-->
+        <div class="centrarContenido">
+            <label>
+                <input type="checkbox" name="check" data-ng-model="usuario.check" required>
+                <span class="glyphicon glyphicon-hand-left"></span>
+                Acepto los términos y condiciones.
+            </label>
+        </div>
+        
+        <div class="centrarContenido">
+
+            <!-- BOTON LIMPIAR -->
+            <button type="button" class="btn btn-info" data-ng-click="reset()">
+              <span class="glyphicon glyphicon-remove-circle"></span> Limpiar
+            </button>
+
+            <!-- BOTON ENVIAR -->
+            <button type="submit" class="btn btn-primary" data-ng-disabled="userForm.$invalid">
+                <span class="glyphicon glyphicon-send"> </span> Enviar Mensaje
+            </button>
+        </div>
+
+    </form>
+
+
+
+    </div>
+    
+</div><!--FIN CAPA BASE-->
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Contenido del Modal -->
+      <div class="modal-content capaBase">
+          
+            <div class="centrarContenido capaBase">
+        
+                <h1><span class=" glyphicon glyphicon-thumbs-up"></span> ¡Recibido!</h1>
+                <div class="centrarContenido80">
+                    <img src="images/sobre.png"  alt="sobre" class="centrarImagen" />
+                </div>
+                <h4>Gracias por contactar con nosotros por email. Te responderemos lo antes posible.</h4>
+
+            </div>
+            <div class="modal-footer">   
+              <button type="button" class="btn btn-default" data-ng-click="goHome()" data-dismiss="modal" >Cerrar</button>
+            </div>
+          
+      </div>
+      
+    </div>
+  </div>

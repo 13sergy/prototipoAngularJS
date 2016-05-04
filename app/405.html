@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      <title>ST&amp;B</title>
+    <meta charset="utf-8">
+<!--    <title>Scaffolding Page</title>-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+    <body data-ng-app="prototipoApp">
+      
+                    <!--role="navigation"-->
+        <nav class="navbar navbar-default navbar-fixed-top" >
+            <div class="container">
+                
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/index.html">
+                        <span class="glyphicon glyphicon-home" ></span>
+                        Inicio
+                    </a>
+                </div>
+                
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a data-ng-href="/#/empresa">Empresa</a></li>
+                    <li><a data-ng-href="/#/servicios">Servicios</a></li>
+                    <li><a data-ng-href="/#/contacto">Contacto</a></li>
+                    <li><a data-ng-href="/#/localizacion">Localización</a></li>
+                  </ul>
+                </div>
+                
+            </div>
+        </nav>
+
+      <!--CONTENIDO DE LA PAGINA DE ERROR-->
+        <div class="capaBase">
+            
+            <h1>Página no encontrada <span>:(</span></h1>
+            <p>Lo sentimos, pero la página que estás intentando ver no existe.</p>
+            <p>Pudo ser que el resultado no haya sido encontrado debido a:</p>
+            <ul>
+                <li>Pérdida de la dirección.</li>
+                <li>Enlace eliminado.</li>
+            </ul>
+            <script>
+                var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
+            </script>
+            <script src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+            
+        </div>
+          
+      
+      
+      <!--PIE DE PAGINA-->
+        <footer class="footer-basic-centered">
+
+            <p class="footer-company-name">ST&amp;B Informatic Services.</p>
+            
+            <p class="footer-links">
+				<a data-ng-href="/#/empresa">Empresa</a>
+				·
+				<a data-ng-href="/#/servicios">Servicios</a>
+				·
+				<a data-ng-href="/#/contacto">Contacto</a>
+				·
+				<a data-ng-href="/#/localizacion">Localización</a>
+			</p>
+            
+            <div class="footer-copyright">
+                <p><b class="footer-copyright">
+              &copy; 2016 Site designed &amp; developed by <a class="footer-links"  target="_blank" href="http://www.indracompany.com"
+                   title="Indracompany">Indra</a>
+                </b></p>
+            </div>
+		</footer>
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>      
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/servicios.js"></script>
+        <script src="scripts/controllers/empresa.js"></script>
+        <script src="scripts/controllers/contacto.js"></script>
+        <script src="scripts/controllers/localizacion.js"></script>
+        <!-- endbuild -->
+</body>
+    
+</html>

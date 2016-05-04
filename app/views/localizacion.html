@@ -1,0 +1,40 @@
+<!doctype html>
+
+<head>
+    <title>{{titulo}}</title>
+    <meta charset="utf-8">
+</head>
+
+<div class="capaBase centrarContenido">
+    <h3>{{titlePage}}</h3>
+    
+    <hr>
+    <section>
+        <h3>Elige una ciudad</h3>
+        <div class="form-inline">
+            
+                <select class="form-control" data-ng-model="ciudad_seleccionada" data-ng-options="city.name for city in cities | orderBy:'name'"
+         data-ng-change="loadWeather()" onload="loadWeather()">
+                </select>
+        </div>
+    </section>
+    <hr>
+    
+    <div class="row" >
+        
+        <div class="caption">
+            <h4><b>{{datos.name}}</b></h4>
+            <img data-ng-src="http://openweathermap.org/img/w/{{datos.weather[0].icon | lowercase }}.png" src="#" alt="estado del tiempo" class="img-responsive centrarContenido" />
+            <span>{{datos.weather[0].description | capitalizeFirst}}</span>
+            <div class="margenImagenPais">
+                <img class="img-responsive  img-thumbnail" data-ng-src="http://www.geonames.org/flags/x/{{datos.sys.country | lowercase}}.gif" src="#" alt="image country" />
+            </div>
+            <p>Temperatura: {{datos.main.temp}} ºC</p>
+            <p>Humedad: {{datos.main.humidity}} %</p>
+            <p>Viento: {{datos.wind.speed}} m/s</p>
+            <p>Presión: {{datos.main.pressure}} bar</p>
+        </div>
+        
+    </div>
+
+</div>
