@@ -10,16 +10,11 @@
 angular.module('prototipoApp')
     .controller('ContactoCtrl', function ($scope) {
 
-        $scope.usuario = {};    
-    
+        $scope.usuario = {};
+
         $scope.titulo = "ST&B Contacto";
 
-    
-
-
-
         $scope.reset = function() {
-//            $scope.usuario = {};
             $scope.usuario.name="";
             $scope.usuario.email="";
             $scope.usuario.phone="";
@@ -47,10 +42,7 @@ angular.module('prototipoApp')
 
         //Funcion que reedireciona al inicio.
         $scope.goHome = function() {
-            window.location.href = "/"; 
+            window.location.href = "/";
         };
 
-
-
     });
-
