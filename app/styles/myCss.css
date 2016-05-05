@@ -35,7 +35,7 @@ body {
   width: 100%; }
 
 .capaBorde {
-  padding: 12px;
+  padding: 2px;
   border-style: inset;
   border-radius: 20px;
   border-color: dodgerblue; }
@@ -178,7 +178,6 @@ body {
     padding: 25px 20px; }
 
   .capaBorde {
-    padding: 6px;
     border-radius: 15px; }
 
   .contenedorContacto {
@@ -236,7 +235,6 @@ body {
     padding: 15px 10px; }
 
   .capaBorde {
-    padding: 6px;
     border-radius: 15px; }
 
   .contenedorContacto {
