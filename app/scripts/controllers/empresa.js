@@ -9,7 +9,5 @@
  */
 angular.module('prototipoApp')
     .controller('EmpresaCtrl', function ($scope) {
-    
         $scope.titulo = "ST&B Empresa";
-    
     });
